@@ -14,7 +14,8 @@ async{
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(MaterialApp(home: CargoSplash(),));
+  runApp(MaterialApp(home: CargoSplash(),
+  debugShowCheckedModeBanner: false,));
 }
 
 
@@ -40,8 +41,17 @@ class _CargoSplashState extends State<CargoSplash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(height: double.infinity,width: double.infinity,
-        color: Colors.blue,
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.white, Colors.blueAccent],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
+
+        height: double.infinity,width: double.infinity,
+
         child: Column(mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: 10,),

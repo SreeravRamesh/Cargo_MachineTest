@@ -51,7 +51,14 @@ class _CargoUserRegisterState extends State<CargoUserRegister> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      body: Container(color: Colors.blue[300],
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.white, Colors.blueAccent],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
         child: SingleChildScrollView(
           padding: EdgeInsets.only(
             bottom: MediaQuery.of(context).viewInsets.bottom + 305,

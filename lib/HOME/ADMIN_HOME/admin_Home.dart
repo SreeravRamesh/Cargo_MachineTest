@@ -1,6 +1,7 @@
 import 'package:cargocollectionmanagement/HOME/ADMIN_HOME/pending_requets.dart';
 import 'package:flutter/material.dart';
 
+import '../../Profile/profile_page.dart';
 import 'customer_page.dart';
 import 'driver_page.dart';
 
@@ -24,7 +25,13 @@ class _AdminHomePageState extends State<AdminHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.blue,
-        title: Text("Cargo Collection Management App"),),
+        title: Text("Cargo Collection Management App"),
+      actions: [
+        CircleAvatar(child: IconButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileCargoPage()));
+        }, icon: Icon(Icons.person)),)
+      ],
+      ),
       body:  screen[index],
         bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,

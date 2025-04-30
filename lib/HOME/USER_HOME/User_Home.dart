@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 
+import '../../Profile/profile_page.dart';
 import 'Request_status.dart';
 
 
@@ -53,7 +54,12 @@ class _UserHomePageState extends State<UserHomePage> {
         title: Text("Cargo Collection Management App"),
       bottom: AppBar(title: Container(
         child: Text("Cargo Collection Request Form",style: TextStyle(fontSize: 20),),
-      ),),),
+      ),),
+        actions: [
+          CircleAvatar(child: IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileCargoPage()));
+          }, icon: Icon(Icons.person)),)
+        ],),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

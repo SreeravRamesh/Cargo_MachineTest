@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Profile/profile_page.dart';
+
 
 class DriverHomePage extends StatefulWidget {
   const DriverHomePage({super.key});
@@ -12,7 +14,13 @@ class _DriverHomePageState extends State<DriverHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("Cargo Collection Management App"),),
+        appBar: AppBar(title: Text("Cargo Collection Management App"),
+        bottom: AppBar(title: Container(child: Text("DRIVERS",style: TextStyle(fontSize: 20),),),),
+          actions: [
+            CircleAvatar(child: IconButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileCargoPage()));
+            }, icon: Icon(Icons.person)),)
+          ],),
         body: ListView.builder(itemBuilder: (context,index){
           return Card(color: Colors.blue[100],
             child: ListTile(

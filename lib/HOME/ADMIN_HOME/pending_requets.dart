@@ -13,7 +13,7 @@ class _ReqColAdminPageState extends State<ReqColAdminPage> {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.blue[100],
         title: Text("Pending Collections",style: TextStyle(fontSize: 20),),),
-      body: LayoutBuilder(builder: (context,index){
+      body: ListView.builder(itemBuilder: (context,index){
         return Card(
           child: ListTile(
             title: Text("Customer : Rahul"),
@@ -21,7 +21,7 @@ class _ReqColAdminPageState extends State<ReqColAdminPage> {
             trailing: ElevatedButton(onPressed: (){}, child: Icon(Icons.delete,color: Colors.red,)),
           ),
         );
-      },),
+      },itemCount: 20,)
     );
   }
 }
