@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "644374551484",
+    "project_id": "cargocollectionmanagement",
+    "storage_bucket": "cargocollectionmanagement.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644374551484:android:1b908de71486814de1a9b9",
+        "android_client_info": {
+          "package_name": "com.example.cargocollectionmanagement"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVWz9iVtWfzHOEjQRUQ59VulO4tpN06Ps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
